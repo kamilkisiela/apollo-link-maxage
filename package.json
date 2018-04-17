@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-maxage",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Apollo Link - invalidate cached queries",
   "author": "Kamil Kisiela <kamil.kisiela@gmail.com>",
   "license": "MIT",

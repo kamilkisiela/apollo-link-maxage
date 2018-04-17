@@ -8,11 +8,10 @@ export default {
     file: 'build/bundle.umd.js',
     format: 'umd',
     exports: 'named',
+    name: 'apolloLink.maxage',
+    sourcemap: true,
     globals,
   },
-  name: 'apolloLink.maxage',
-  exports: 'named',
-  sourcemap: true,
   external: Object.keys(globals),
   onwarn,
 };
