@@ -1,6 +1,7 @@
 # MaxAge ApolloLink
 
 [![npm version](https://badge.fury.io/js/apollo-link-maxage.svg)](https://badge.fury.io/js/apollo-link-maxage)
+[![CircleCI](https://circleci.com/gh/kamilkisiela/apollo-link-maxage.svg?style=svg)](https://circleci.com/gh/kamilkisiela/apollo-link-maxage)
 
 ## Purpose
 
