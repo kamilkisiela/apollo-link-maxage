@@ -1,5 +1,7 @@
 import { ApolloLink, Operation, NextLink, Observable, FetchResult } from 'apollo-link';
 import { ApolloCache } from 'apollo-cache';
+import { getMainDefinition } from 'apollo-utilities';
+import { OperationDefinitionNode } from 'graphql';
 
 // turns 10d into number of ms
 function msTime(str: string): number {
@@ -30,8 +32,9 @@ export class MaxAgeLink extends ApolloLink {
 
   public request(op: Operation, forward: NextLink): Observable<FetchResult> | null {
     const ctx = op.getContext();
+    const isQuery = (getMainDefinition(op.query) as OperationDefinitionNode).operation === 'query';
 
-    if (!ctx.maxAge) {
+    if (!isQuery || !ctx.maxAge) {
       return forward(op);
     }
 
