@@ -1,6 +1,12 @@
 # MaxAge ApolloLink
 
-## Install
+[![npm version](https://badge.fury.io/js/apollo-link-maxage.svg)](https://badge.fury.io/js/apollo-link-maxage)
+
+## Purpose
+
+An Apollo Link to invalidate cached queries.
+
+## Installation
 
 ```
 yarn add apollo-link-maxage
@@ -16,24 +22,29 @@ import { MaxAgeLink } from 'apollo-link-maxage';
 import { InMemoryCache } from 'apollo-inmemory-cache';
 
 const myCache = new InMemoryCache();
-const maxAgeLink = new MaxAgeLink({ cache: myCache });
+const maxAgeLink = new MaxAgeLink({
+  cache: myCache,
+});
 ```
 
 ```js
 // query options
 {
-    query: gql`
-        query me {
-            me {
-                name
-            }
-        }
-    `,
-    context: {
-        maxAge: '5m',
-    },
+  query: gql`
+    query me {
+      me {
+        name
+      }
+    }
+  `,
+  fetchPolicy: 'network-only',
+  context: {
+    maxAge: '5m', // or 300000 (5m in ms)
+  },
 }
 ```
+
+> NOTE: It's important to set `fetchPolicy` to `network-only` or similar. This is because ApolloClient won't execute a Link if there is no need to fetch a result from a GraphQL endpoint.
 
 ## How it works
 
