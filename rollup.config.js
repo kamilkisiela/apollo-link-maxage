@@ -3,9 +3,9 @@ const globals = {
 };
 
 export default {
-  input: 'build/index.js',
+  input: 'dist/index.js',
   output: {
-    file: 'build/bundle.umd.js',
+    file: 'dist/bundle.umd.js',
     format: 'umd',
     exports: 'named',
     name: 'apolloLink.maxage',

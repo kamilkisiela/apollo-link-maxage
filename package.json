@@ -4,27 +4,24 @@
   "description": "Apollo Link - invalidate cached queries",
   "author": "Kamil Kisiela <kamil.kisiela@gmail.com>",
   "license": "MIT",
-  "main": "./build/bundle.umd.js",
-  "module": "./build/index.js",
-  "jsnext:main": "./build/index.js",
-  "typings": "./build/index.d.ts",
+  "main": "./dist/bundle.umd.js",
+  "module": "./dist/index.js",
+  "jsnext:main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "kamilkisiela/apollo-link-maxage"
   },
-  "keywords": [
-    "apollo",
-    "graphql",
-    "apollo-link"
-  ],
+  "keywords": ["apollo", "graphql", "apollo-link"],
   "scripts": {
     "test": "yarn build",
     "prepublishOnly": "yarn build",
-    "clean": "rimraf build/*",
+    "clean": "rimraf dist/ && rimraf npm/",
     "build": "tsc",
     "bundle": "rollup -c rollup.config.js",
     "prebuild": "yarn clean",
-    "postbuild": "yarn bundle"
+    "postbuild": "yarn bundle",
+    "deploy": "./scripts/deploy.sh"
   },
   "peerDependencies": {
     "apollo-cache": "^1.1.0",
