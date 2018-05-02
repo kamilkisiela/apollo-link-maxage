@@ -28,7 +28,7 @@
     "apollo-link": "^1.2.0"
   },
   "devDependencies": {
-    "apollo-cache": "1.1.7",
+    "apollo-cache": "1.1.8",
     "apollo-link": "1.2.2",
     "rimraf": "2.6.2",
     "rollup": "0.58.2",
