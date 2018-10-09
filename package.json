@@ -31,7 +31,7 @@
     "apollo-cache": "1.1.17",
     "apollo-link": "1.2.2",
     "rimraf": "2.6.2",
-    "rollup": "0.66.4",
+    "rollup": "0.66.5",
     "typescript": "2.9.2"
   },
   "dependencies": {
