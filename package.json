@@ -30,7 +30,7 @@
   "devDependencies": {
     "apollo-cache": "1.1.17",
     "apollo-link": "1.2.2",
-    "rimraf": "2.6.2",
+    "rimraf": "2.6.3",
     "rollup": "0.68.2",
     "typescript": "2.9.2"
   },
