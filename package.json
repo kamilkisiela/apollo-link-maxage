@@ -28,8 +28,8 @@
     "apollo-link": "^1.2.0"
   },
   "devDependencies": {
-    "apollo-cache": "1.1.17",
-    "apollo-link": "1.2.2",
+    "apollo-cache": "1.2.1",
+    "apollo-link": "1.2.11",
     "rimraf": "2.6.3",
     "rollup": "0.68.2",
     "typescript": "2.9.2"
