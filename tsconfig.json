@@ -2,15 +2,16 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "target": "es5",
-    "module": "es2015",
+    "module": "esnext",
+    "target": "es2018",
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
     "lib": ["es6", "dom", "esnext"],
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "importHelpers": true
   },
   "files": ["src/index.ts"]
 }
