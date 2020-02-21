@@ -45,6 +45,8 @@ export class MaxAgeLink extends ApolloLink {
       const maxAge: number = typeof ctx.maxAge === 'string' ? msTime(ctx.maxAge) : ctx.maxAge;
       const expirationDate = new Date(now.getTime() + maxAge);
 
+      op.setContext({ cached: false });
+
       this.schedule(key, expirationDate);
 
       return forward(op);
@@ -56,6 +58,8 @@ export class MaxAgeLink extends ApolloLink {
           query: op.query,
           variables: op.variables,
         });
+
+        op.setContext({ cached: true });
 
         observer.next({ data });
         observer.complete();
